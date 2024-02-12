@@ -1,7 +1,14 @@
 const  textInput = document.getElementById('text-input');
 const checkButton = document.getElementById('check-btn');
+const resultDiv = document.getElementById('result');
 
-const text = textInput.addEventListener('input', (e) => console.log("working", e.target.value))
+
+let text = textInput.addEventListener('input', (e) => text = e.target.value)
 console.log(text)
-checkButton.addEventListener('click', (e) => text === undefined ? alert("Please input a value") : console.log("yurrr"))
+checkButton.addEventListener('click', (e) => {
+    console.log(text)
+    if(text === undefined) {
+        alert("Please input a value")
+    } else if(text.toUpperCase() === "A") result.innerText = "A is a palindrome"
+})
 
