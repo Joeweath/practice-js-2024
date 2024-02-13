@@ -15,9 +15,8 @@ checkButton.addEventListener('click', () => {
 const palindromeChecker = (str) => {
     let newStr = str.toUpperCase().match(/[a-zA-Z]/g).join('')
     let compStr = str.match(/[a-zA-Z]/g).reverse().join('').toUpperCase()
-    console.log(newStr, compStr)
 
     if(newStr === compStr){
-        console.log(`${str} is a palindrome`)
-    } else console.log(`${compStr} is a NOT palindrome`)
+        resultDiv.innerHTML =`${str} is a palindrome`
+    } else resultDiv.innerHTML = `${compStr} is a NOT palindrome`
 }
